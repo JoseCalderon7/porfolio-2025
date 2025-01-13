@@ -1,0 +1,70 @@
+---
+import Github from "../icons/Github.astro";
+import Link from "../icons/Link.astro";
+
+import Tecnologias from "../components/Tecnologias.astro";
+---
+
+<div class="flex flex-col gap-12 items-start">
+    <article class="flex flex-col items-center md:flex-row gap-4 max-w-7xl">
+        <img
+            class="rounded-lg w-[500px] md:w-[400px] md:h-[350px] aspect-video object-cover hover:rotate-2 hover:scale-[1.02] transition-all duration-300"
+            src="./src/assets/images/imagenProyectoPanaP.png"
+            alt="Proyecto PanaP - Proyecto de título"
+        />
+        <div class="flex-1 flex flex-col gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-green-400">
+                Proyecto de título - PanaP
+            </h3>
+            <p class="text-lg opacity-95 max-w-xl">
+                PanaP es una aplicación móvil única que conecta a usuarios con
+                negocios locales, mostrando en tiempo real la disponibilidad de
+                pan y permitiendo reservas para asegurar compras. Optimiza la
+                gestión diaria de comerciantes, reduce desperdicios y mejora la
+                experiencia de compra, promoviendo un comercio más eficiente y
+                sostenible.
+            </p>
+            <div class="flex gap-4 mt-auto">
+                <Tecnologias
+                    href="https://github.com/BrunoAraus/Proyecto-PANAP"
+                >
+                    <Github />
+                    GitHub
+                </Tecnologias>
+                <Tecnologias
+                    href="https://github.com/BrunoAraus/Proyecto-PANAP/raw/refs/heads/main/Fase%203/Evidencias%20Grupales/Manual%20de%20usuario.pdf"
+                >
+                    <Link />
+                    Manual
+                </Tecnologias>
+            </div>
+        </div>
+    </article>
+    <article class="flex flex-col md:flex-row gap-4 max-w-7xl">
+        <img
+            class="rounded-lg w-[500px] md:w-[400px] md:h-[350px] aspect-video object-cover hover:-rotate-2 hover:scale-[1.02] transition-all duration-300"
+            src="./src/assets/images/musicPro.png"
+            alt="Proyecto PanaP - Proyecto de título"
+        />
+        <div class="flex-1 flex flex-col gap-4">
+            <h3 class="text-2xl font-semibold text-green-400">
+                Ecommerce con Django - MusicPro
+            </h3>
+            <p class="text-lg opacity-95 max-w-xl">
+                MusicPro es una plataforma web
+                destinada a la venta de productos musicales. Podemos
+                registrarnos y obtener descuentos. Además, se cuenta
+                con distintos roles para todas las áreas responsables y registros de estos.
+                Se integran procesos de ventas mediante Transbank.
+            </p>
+            <div class="flex gap-4 mt-auto">
+                <Tecnologias
+                    href="https://github.com/BrunoAraus/MusicPro"
+                >
+                    <Github />
+                    GitHub
+                </Tecnologias>
+            </div>
+        </div>
+    </article>
+</div>

@@ -1,11 +1,165 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import Github from "../icons/Github.astro";
+import Social from "../components/Social.astro";
+import Correo from "../icons/Correo.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Trabajo from "../icons/Trabajo.astro";
+import Codigo from "../icons/Codigo.astro";
+import About from "../icons/About.astro";
+import Proyectos from "../components/Proyectos.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<main class="px-4">
+		<section id="inicio" class="mx-auto pt-32 pb-5 max-w-[740px]">
+			<div class="flex flex-row gap-4 mb-4">
+				<img
+					src="./src/assets/images/imagenCV.jpg"
+					class="size-20 rounded-full"
+					alt="Foto José Calderón"
+				/>
+				<a
+					target="_blank"
+					href="https://www.linkedin.com/in/jos%C3%A9-calder%C3%B3n-ortega-8449a4224/"
+					class="flex items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</div>
+
+			<h1 class="text-3xl sm:text-3xl lg:text-4xl flex items-center gap-3 mb-4 font-bold">
+				Hola, soy José Calderón 👋🏼
+			</h1>
+
+			<h2 class="text-xl sm:text-lg max-w-[600px] text-pretty opacity-90">
+				Egresado de Ingeniería en Informática. De <span
+					class="text-green-400">Melipilla, Chile 🇨🇱</span
+				>. Enfocado en desarrollador <span class="text-green-400"
+					>soluciones innovadoras</span
+				> y <span class="text-green-400">100% funcionales</span>.
+				Especializado en desarrollo <span class="text-green-400"
+					>Front-End</span
+				> y <span class="text-green-400">Base de datos</span>.
+			</h2>
+
+			<nav class="flex flex-wrap justify-left gap-4 mt-4">
+				<Social
+					href="https://www.linkedin.com/in/jos%C3%A9-calder%C3%B3n-ortega-8449a4224/"
+				>
+					<Linkedin />
+					LinkedIn
+				</Social>
+
+				<Social href="https://github.com/JoseCalderon7">
+					<Github />
+					Github
+				</Social>
+
+				<Social href="mailto:jose.calderonortega@gmail.com">
+					<Correo />
+					Contáctame
+				</Social>
+			</nav>
+		</section> 
+		<section id="experiencia" class="mx-auto max-w-[740px] pt-20 pb-5">
+			<div class="flex gap-2 items-center mb-4">
+				<Trabajo />
+				<h2 class="text-left text-2xl font-semibold">
+					Experiencia Profesional y Laboral
+				</h2>
+			</div>
+			<div class="pl-3">
+				<Experiencia />
+			</div>
+		</section>
+
+		<section id="proyectos" class="mx-auto max-w-[780px] pt-16 pb-5">
+			<div class="flex gap-2 items-center pb-5">
+				<Codigo />
+				<h2 class="text-left text-2xl font-semibold">
+					Mis Proyectos y participaciones
+				</h2>
+			</div>
+			<Proyectos />
+			
+			<div class="flex justify-center mt-10 mb-6">
+				<a
+					href="https://github.com/JoseCalderon7"
+					target="_blank"
+					rel="noopener"
+					class="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-green-500 opacity-90 rounded-lg 
+					hover:bg-green-600/90 transition-all duration-300 
+					hover:-translate-y-1 hover:shadow-[0_8px_15px_rgba(34,197,94,0.25)] 
+					active:translate-y-0 active:shadow-none gap-2"
+				>
+				Ver más proyectos
+				<Github class="size-6" />
+				</a>
+			</div>
+		</section>
+
+		<section id="sobremi" class="mx-auto max-w-[740px] pt-20 pb-16">
+			<div class="flex gap-2 items-center mb-4">
+				<About />
+				<h2 class="text-left text-2xl font-semibold">
+					Sobre mí
+				</h2>
+			</div>
+			
+			<div class="flex flex-col md:flex-row gap-8 items-center">
+				<div class="md:w-2/3">
+					<h3 class="text-xl text-pretty">
+						Me llamo José Calderón, tengo 22 años, egresado de la
+						carrera <span class="text-green-400"
+							>Ingeniería en Informática</span
+						>. Me especializo en el
+						<span class="text-green-400">diseño</span> y <span
+							class="text-green-400"
+							>desarrollo de soluciones innovadoras</span
+						> que optimicen procesos y mejoren la experiencia del usuario.
+						<br />
+						<br />
+						Además de mis intereses sobre la informática, me gusta <span
+							class="text-green-400"
+							>innovar con proyectos únicos</span
+						> y que <span class="text-green-400"
+							>aporten gran valor</span
+						> a la sociedad, tal fue mi proyecto de titulo que buscaba
+						digitalizar a todos los negocios locales de nuestro entorno
+						para pedir y reservar Pan.
+						<br />
+						<br />
+						Mi <span class="text-green-400"
+							>objetivo como desarrollador</span
+						> es poder contribuir con <span class="text-green-400"
+							>soluciones apropiadas</span
+						> para cada problema que se me presente, <span
+							class="text-green-400">liderar proyectos</span
+						> y <span class="text-green-400"
+							>marcar la diferencia</span
+						>
+						frente al resto.
+					</h3>
+				</div>
+				<div class="md:w-1/3 order-1 md:order-1">
+					<img
+						class="w-full max-w-[250px] h-auto object-cover rotate-2 rounded-3xl border-4 border-green-600"
+							src="./src/assets/images/portfolio.jpg"
+							alt="Portfolio"
+					/>
+				</div>
+			</div>
+		</section>
+		<footer class="flex flex-row items-center justify-center gap-4 text-left whitespace-nowrap">
+			<h1 class="text-md text-gray-300 my-4">Porfolio personal 2025 ©</h1>
+			<div class="flex flex-row items-center justify-center gap-1 text-gray-300">
+				<a target="_blank" href="mailto:jose.calderonortega@gmail.com">Contacto</a>
+				<span>|</span>
+				<a target="_blank" href="https://github.com/JoseCalderon7">GitHub</a>
+			</div>
+		</footer>
+	</main>
 </Layout>
